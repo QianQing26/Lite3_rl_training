@@ -1,6 +1,6 @@
 # RL-Lite3
 > [!NOTE]
-> This repo is now outdated and not supported! Please use the new rl_training repo in [rl_training]([https://github.com/DeepRoboticsLab](https://github.com/DeepRoboticsLab/rl_training)).
+> This repo is now outdated and not supported! Please use the new [rl_training](https://github.com/DeepRoboticsLab/rl_training.git) repo.
 
 [简体中文](./README_ZH.md)
 
@@ -65,5 +65,6 @@ Copy your policy file to the project [rl_deploy](https://github.com/DeepRobotics
   
   
 [Communication](https://www.deeprobotics.cn/en/index/company.html#maps)
+
 
 
