@@ -1,6 +1,6 @@
 ﻿# RL-Lite3
 > [!NOTE]
-> 此代码仓库已过时且不再维护，请使用最新版训练代码： [rl_training](https://github.com/DeepRoboticsLab/rl_training.git)
+> 此代码仓库暂停维护，请使用最新版训练代码： [rl_training](https://github.com/DeepRoboticsLab/rl_training.git)。
 
 [English](./README.md)
 

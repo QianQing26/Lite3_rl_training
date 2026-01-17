@@ -1,6 +1,6 @@
 # RL-Lite3
 > [!NOTE]
-> This repo is now outdated and not supported! Please use the new [rl_training](https://github.com/DeepRoboticsLab/rl_training.git) repo.
+> This code repository is no longer maintained! Please use the new [rl_training](https://github.com/DeepRoboticsLab/rl_training.git) repo.
 
 [简体中文](./README_ZH.md)
 
