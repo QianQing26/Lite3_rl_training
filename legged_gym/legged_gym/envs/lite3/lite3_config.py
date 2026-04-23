@@ -63,10 +63,10 @@ class Lite3RoughCfg(LeggedRobotCfg):
         pitch_roll_factor = [1, 1]
 
         class scales(LeggedRobotCfg.rewards.scales):
-            lin_vel_z = -2.0 # -6.0
-            ang_vel_xy = -0.05 # -1.
-            orientation = -0.2 # -7.0
-            base_height = -1.0 # -1.0
+            lin_vel_z = -1.5 # -6.0
+            ang_vel_xy = -0.04 # -1.
+            orientation = -0.3 # -7.0
+            base_height = -0.8 # -1.0
             torques = -0.00001 # -0.0002
             dof_vel = -0.0
             dof_acc = -2.5e-7 # -1.25e-07
@@ -76,11 +76,11 @@ class Lite3RoughCfg(LeggedRobotCfg):
             termination = -0.0
             # power = -2.5e-5
             dof_pos_limits = -10.0 # -10.0
-            tracking_lin_vel = 1.0 # 2.0
+            tracking_lin_vel = 2.0 # 2.0
             tracking_ang_vel = 0.5 # 1.0
             feet_air_time = 1.0
             stumble = -0.0 # -0.5
-            stand_still = -0.05 # -0.3
+            stand_still = -0.02 # -0.3
             feet_velocity = -0.05 # -0.2
             episode_length = 0.0 # 0.1
 
@@ -101,18 +101,18 @@ class Lite3RoughCfg(LeggedRobotCfg):
             height_measurements = 0.0
 
     class commands(LeggedRobotCfg.commands):
-        curriculum = False
+        curriculum = True
         fixed_commands = None  # None or [lin_vel_x, lin_vel_y, ang_vel_yaw]
         resampling_time = 6  # time before command are changed[s]
 
         class ranges:
             lin_vel_x = [-1.0, 1.0]  # min max [m/s]
-            lin_vel_y = [-1.0, 1.0]  # min max [m/s]
+            lin_vel_y = [-0.5, 0.5]  # min max [m/s]
             ang_vel_yaw = [-1.0, 1.0]  # min max [rad/s]
             heading = [-3.14, 3.14]
 
     class terrain(LeggedRobotCfg.terrain):
-        mesh_type = 'plane'  # none, plane, heightfield or trimesh
+        mesh_type = 'heightfield'  # none, plane, heightfield or trimesh
         dummy_normal = True
         random_reset = True
         curriculum = True
@@ -126,13 +126,13 @@ class Lite3RoughCfg(LeggedRobotCfg):
         # num_cols = 10  # number of terrain cols (types)
         # terrain types: [smooth slope, rough slope, stairs up, stairs down, discrete, stepping stones, wave]
         # terrain_proportions = [0.15, 0.15, 0.15, 0.0, 0.2, 0.2, 0.15]
-        terrain_proportions = [0.2, 0.2, 0, 0.0, 0.2, 0.2, 0.2]
+        terrain_proportions = [0.15, 0.15, 0.2, 0.2, 0.2, 0.0, 0.1]
         # rough terrain only:
         measure_heights = False
 
     class domain_rand(LeggedRobotCfg.domain_rand):
         randomize_friction = True
-        friction_range = [0.1, 1.25]
+        friction_range = [0.2, 1.25]
         randomize_base_mass = True
         added_mass_range = [-1., 3.]
         randomize_com_offset = True
